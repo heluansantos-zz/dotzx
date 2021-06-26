@@ -1,0 +1,26 @@
+.container {
+  background-color: purple;
+  color: #fff;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 40px;
+  display: flex;
+  span {
+    font-size: 30px;
+    padding: 10px;
+    float: left;
+  }
+  mat-icon{
+    float: right;
+    padding: 10px;
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+.mat-align-tabs {
+  background-color: #d1d1d1;
+}
