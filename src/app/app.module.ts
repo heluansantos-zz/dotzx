@@ -10,12 +10,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { ProductsCatComponent } from './screens/products-cat/products-cat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    ProductItemComponent,
+    ProductsCatComponent,
   ],
   imports: [
     BrowserModule,
