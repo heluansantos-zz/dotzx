@@ -1,15 +1,18 @@
 <div class="container">
   <div>
-    <mat-icon class="example-icon">arrow_back_ios</mat-icon>
-  </div>
-  <div>
     <span class="container-title">DotzX</span>
   </div>
   <div>
+    <button (click)="setShowCart()">
     <mat-icon class="example-icon">perm_identity</mat-icon>
-    <mat-icon class="example-icon" (click)="setShowCart()">shopping_cart</mat-icon>
+  </button>
+  <button (click)="setShowCart()">
+    <mat-icon class="example-icon">shopping_cart</mat-icon>
+  </button>
+  <button (click)="setShowCart()">
     <mat-icon class="example-icon">help</mat-icon>
+  </button>
   </div>
-  <button (click)="setShowCart()">okkk</button>
+
 </div>
 <app-shopping-cart (onClose)="setShowCart()" [show]="showCart"></app-shopping-cart>

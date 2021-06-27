@@ -15,5 +15,8 @@ export abstract class AppService {
   getProducts(): Observable<unknown> {
     return this.http.get(`${this.api}/product`);
   }
+  getProductById(id: string): Observable<unknown> {
+    return this.http.get(`${this.api}/product/${id}`);
+  }
 
 }

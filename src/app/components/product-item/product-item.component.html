@@ -3,6 +3,6 @@
   <img [src]="product?.avatar" />
   <span>{{ product?.price }} DOTZX</span>
   <div class="productAdd">
-    <button (click)="addToCart()">Adicionar ao Carrinho</button>
+    <button [routerLink]="['/produto', product?.id]">Visualizar produto</button>
   </div>
 </div>
