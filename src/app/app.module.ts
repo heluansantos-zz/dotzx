@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ProductsCatComponent } from './screens/products-cat/products-cat.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,11 @@ import { ProductsCatComponent } from './screens/products-cat/products-cat.compon
     MatSliderModule,
     MatIconModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

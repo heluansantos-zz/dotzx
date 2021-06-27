@@ -1,8 +1,7 @@
 <div class="container-product">
-  <span>lll</span>
-  <img [src]="" />
-  <span>lll</span>
-  <span>200 DOTZX</span>
+  <span>{{ product?.name }}</span>
+  <img [src]="product?.avatar" />
+  <span>{{ product?.price }} DOTZX</span>
   <div class="productAdd">
     <button>Adicionar ao Carrinho</button>
   </div>
