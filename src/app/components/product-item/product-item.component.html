@@ -3,6 +3,6 @@
   <img [src]="product?.avatar" />
   <span>{{ product?.price }} DOTZX</span>
   <div class="productAdd">
-    <button>Adicionar ao Carrinho</button>
+    <button (click)="addToCart()">Adicionar ao Carrinho</button>
   </div>
 </div>

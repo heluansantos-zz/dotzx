@@ -1,6 +1,5 @@
 import { createAction, props } from '@ngrx/store';
 import { Iproduct } from './../../interfaces/product';
-
 import { Iprofile } from './../../interfaces/profile';
 
 export const upsertProfile = createAction(

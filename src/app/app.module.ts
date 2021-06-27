@@ -14,7 +14,18 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { ProductsCatComponent } from './screens/products-cat/products-cat.component';
 import { StoreModule } from '@ngrx/store';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { metaReducer } from './store/state';
+import {
+  IApplicationState,
+  initialValue,
+  reducers,
+} from './store/application-state';
 
+export function initialState(): IApplicationState {
+  return Object.assign({}, initialValue);
+}
+
+export const metaReducers = [metaReducer];
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +43,10 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     MatIconModule,
     MatTabsModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot(reducers, {
+      initialState,
+      metaReducers,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
