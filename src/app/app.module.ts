@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ProductsCatComponent } from './screens/products-cat/products-cat.component';
 import { StoreModule } from '@ngrx/store';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { StoreModule } from '@ngrx/store';
     HeaderComponent,
     ProductItemComponent,
     ProductsCatComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,

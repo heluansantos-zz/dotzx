@@ -5,11 +5,10 @@
   <div>
     <span class="container-title">DotzX</span>
   </div>
-  <div>
+  <div (click)="setShowCart()">
     <mat-icon class="example-icon">perm_identity</mat-icon>
-    <mat-icon class="example-icon">shopping_cart</mat-icon>
-    <mat-icon class="example-icon">home</mat-icon>
+    <mat-icon class="example-icon" (click)="setShowCart()">shopping_cart</mat-icon>
     <mat-icon class="example-icon">help</mat-icon>
   </div>
 </div>
-
+<app-shopping-cart (onClose)="setShowCart()" [show]="showCart"></app-shopping-cart>

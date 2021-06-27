@@ -1,0 +1,118 @@
+.cart {
+  width: 70%;
+  height: 100vh;
+  position: fixed;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: -36px 0px 84px 3px #0000004d;
+  padding: 20px;
+  max-width: 430px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  &__content {
+    height: calc(100vh - 283px);
+    overflow-y: scroll;
+
+    &__products {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      height: 100%;
+      overflow-y: auto;
+
+      &__product {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        border-bottom: 1px solid #ff6d0136;
+
+        img {
+          min-width: 120px;
+          max-width: 120px;
+          max-height: 120px;
+          min-height: 120px;
+          object-fit: contain;
+          margin-right: 10px;
+        }
+
+        &__infos {
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+
+          &__price {
+            color: purple;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    background-color: purple;
+    color: #fff;
+    position: absolute;
+    padding: 15px 20px;
+    left: 0;
+    bottom: 40px;
+    height: 230px;
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      p {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 2px 0px;
+      }
+
+      &__infos {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &__infos {
+      p {
+        margin: 0;
+      }
+    }
+
+    button {
+      width: calc(100% - 40px);
+      border: 1px solid #fff;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 4px;
+      color: #fff;
+      padding: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+        color: #ff6d01;
+      }
+    }
+  }
+}
