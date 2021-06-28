@@ -4,10 +4,12 @@
     <div class="cart__content__products">
       <p *ngIf="emptyList()">Carrinho Vazio</p>
       <div *ngFor="let product of cartData" class="cart__content__products__product">
-        <img [src]="" />
+        <img [src]="product?.avatar" />
         <div class="cart__content__products__product__infos">
-          <span class="cart__content__products__product__infos__name">nome do produto</span>
-          <span class="cart__content__products__product__infos__price">preço <small>Dz</small></span>
+          <span class="cart__content__products__product__infos__name">{{
+            product?.name
+            }}</span>
+          <span class="cart__content__products__product__infos__price">{{ product?.price }} <small>DOTZX</small></span>
         </div>
       </div>
     </div>
@@ -23,17 +25,17 @@
     </div>
     <div class="cart__footer__infos">
       <p>
-        Seus pontos: <span>User points <small>Dz</small></span>
+        Seus pontos: <span>{{ user?.points }} <small>DOTZX</small></span>
       </p>
     </div>
     <div class="cart__footer__infos">
       <p>
-        Valor da troca: <span>Total <small>Dz</small></span>
+        Valor da troca: <span>{{ getTotal() }} <small>DOTZX</small></span>
       </p>
     </div>
     <div class="cart__footer__infos">
       <p>
-        Saldo: <span>Balance <small>Dz</small></span>
+        Saldo: <span>{{ getBalance() }} <small>DOTZX</small></span>
       </p>
     </div>
     <button>Concluir troca</button>

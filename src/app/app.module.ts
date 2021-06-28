@@ -21,6 +21,7 @@ import {
   reducers,
 } from './store/application-state';
 import { ProductComponent } from './screens/product/product.component';
+import { ProfileComponent } from './screens/profile/profile.component';
 
 export function initialState(): IApplicationState {
   return Object.assign({}, initialValue);
@@ -36,6 +37,7 @@ export const metaReducers = [metaReducer];
     ProductsCatComponent,
     ShoppingCartComponent,
     ProductComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

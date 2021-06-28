@@ -1,0 +1,26 @@
+<div class="profile">
+  <div class="container">
+    <div class="profile__user">
+      <img class="profile__user__avatar" [src]="user?.avatar" />
+      <span class="profile__user__name">{{ user?.name }}</span>
+      <span class="profile__user__points">{{ user?.points }} <small>Dz</small></span>
+    </div>
+
+    <p class="profile__label">Pedidos</p>
+    <div class="profile__orders">
+      <div *ngFor="let order of user?.orders" class="profile__orders__order">
+        <span>{{ order.status }}</span>
+        <div class="profile__orders__order__infos">
+          <span class="profile__orders__order__infos__name">{{
+            order.product.name
+            }}</span>
+          <span class="profile__orders__order__infos__price">{{ order.product.price }} <small>Dz</small></span>
+        </div>
+        <div class="profile__orders__order__address">
+          <span>{{ user?.address?.street }}, {{ user?.address?.number }}</span>
+          <span>{{ user?.address?.zip_code }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
