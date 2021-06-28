@@ -1,9 +1,8 @@
-export interface Iproduct {
-  createdAt: Date;
-  name: string;
-  avatar: string;
-  dotzx: number;
-  price: number;
-  description: string;
+export interface IProduct {
   id: string;
+  createdAt: string;
+  price: number;
+  image: string;
+  name: string;
+  description: string;
 }

@@ -1,10 +1,10 @@
-import { Iproduct } from './../../interfaces/product';
-import { Iprofile } from './../../interfaces/profile';
+import { IProduct } from './../../interfaces/product';
+import { IProfile } from './../../interfaces/profile';
 
 export interface IUserState {
-  profile: Iprofile;
+  profile: IProfile;
   showCart: boolean;
-  cartData: Iproduct[];
+  cartData: IProduct[];
 }
 
 export const userInitialState: IUserState = {

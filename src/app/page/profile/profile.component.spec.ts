@@ -1,31 +1,31 @@
 import { TestBed } from '@angular/core/testing';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
-import { HeaderComponent } from './header.component';
+import { ProfileComponent } from './profile.component';
 import {
   IApplicationState,
   initialValue,
-} from './../../store/application-state';
+} from '../../store/application-state';
 
-describe('HeaderComponent', () => {
-  let headerComponent: HeaderComponent;
+describe('ProfileComponent', () => {
+  let profileComponent: ProfileComponent;
   let mockStore: MockStore<IApplicationState>;
 
   const initialState: IApplicationState = initialValue;
 
   beforeEach((): void => {
     TestBed.configureTestingModule({
-      providers: [HeaderComponent, provideMockStore({ initialState })],
+      providers: [ProfileComponent, provideMockStore({ initialState })],
     });
 
-    headerComponent = TestBed.inject(HeaderComponent);
+    profileComponent = TestBed.inject(ProfileComponent);
     mockStore = TestBed.inject(MockStore);
 
     spyOn(mockStore, 'dispatch').and.callFake((): void => {});
   });
 
-  it('should initialize HeaderComponent', (): void => {
-    expect(headerComponent).toBeDefined();
+  it('should initialize ProfileComponent', (): void => {
+    expect(profileComponent).toBeDefined();
     expect(mockStore).toBeDefined();
   });
 });

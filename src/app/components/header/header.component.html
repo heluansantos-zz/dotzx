@@ -1,18 +1,8 @@
-<div class="container">
-  <div>
-    <span class="container-title">DotzX</span>
+<div class="header">
+  <div class="container">
+    <h1 [routerLink]="['/']">D o t z X</h1>
+    <div class="header__user" [routerLink]="['/perfil']">
+      <img class="header__user__avatar" [src]="user?.avatar" />
+    </div>
   </div>
-  <div>
-    <button [routerLink]="['/perfil']">
-    <mat-icon class="example-icon">perm_identity</mat-icon>
-  </button>
-  <button (click)="setShowCart()">
-    <mat-icon class="example-icon">shopping_cart</mat-icon>
-  </button>
-  <button (click)="setShowCart()">
-    <mat-icon class="example-icon">help</mat-icon>
-  </button>
-  </div>
-
 </div>
-<app-shopping-cart (onClose)="setShowCart()" [show]="showCart"></app-shopping-cart>

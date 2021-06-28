@@ -2,15 +2,16 @@ import { Component, OnDestroy } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 
-import { IApplicationState } from './../../store/application-state';
-import { UserSelectors } from './../../store/user';
-import { IProfile } from './../../interfaces/profile';
+import { IApplicationState } from '../../store/application-state';
+import { UserSelectors } from '../../store/user';
+import { IProfile } from '../../interfaces/profile';
+
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss'],
 })
-export class HeaderComponent implements OnDestroy {
+export class ProfileComponent implements OnDestroy {
   public user: IProfile | undefined;
 
   protected subscriptions: Subscription[] = [];

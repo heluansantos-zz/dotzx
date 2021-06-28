@@ -2,20 +2,20 @@ import { Action, createReducer, on } from '@ngrx/store';
 
 import * as UserActions from './../../store/user/actions';
 import { IUserState, userInitialState } from './../../store/user/state';
-import { Iprofile } from './../../interfaces/profile';
-import { Iproduct } from './../../interfaces/product';
+import { IProfile } from './../../interfaces/profile';
+import { IProduct } from './../../interfaces/product';
 
 const userReducer = createReducer(
   userInitialState,
   on(
     UserActions.upsertProfile,
-    (state: IUserState, { profile }: { profile: Iprofile }): IUserState => {
+    (state: IUserState, { profile }: { profile: IProfile }): IUserState => {
       return { ...state, profile };
     },
   ),
   on(
     UserActions.setCartData,
-    (state: IUserState, { cartData }: { cartData: Iproduct }): IUserState => {
+    (state: IUserState, { cartData }: { cartData: IProduct }): IUserState => {
       if (!state.cartData) {
         state.cartData = [];
       }

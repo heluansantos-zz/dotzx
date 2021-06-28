@@ -1,1 +1,11 @@
-<app-home></app-home>
+<div class="app">
+  <div class="app__router">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="app__cart" (click)="setShowCart()">
+    <img class="app__cart__icon" src="./../assets/img/shopping-cart.png" />
+  </div>
+</div>
+
+<app-cart (onClose)="setShowCart()" [show]="showCart"></app-cart>

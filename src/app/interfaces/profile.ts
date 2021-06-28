@@ -1,4 +1,6 @@
-export interface Iprofile {
+import { IAddress } from './address';
+
+export interface IProfile {
   id: string;
   createdAt: string;
   name: string;
@@ -6,10 +8,4 @@ export interface Iprofile {
   address: IAddress;
   points: number;
   orders: any;
-}
-
-export interface IAddress {
-  street: string;
-  number: string;
-  zip_code: string;
 }

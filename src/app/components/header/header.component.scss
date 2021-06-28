@@ -1,32 +1,46 @@
-.container {
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: purple;
-  color: #fff;
-  justify-content: space-between;
-  flex-direction: row;
-  height: 40px;
-  display: flex;
-  span {
-    font-size: 30px;
-    padding: 10px;
-    float: left;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
   }
-  mat-icon{
-    float: right;
-    padding: 10px;
-  }
-  button {
-    background-color: transparent;
-    border-color: transparent;
-    height: 10px;
+
+  h1 {
+    margin: 10px;
+    font-weight: bolder;
     color:white;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    padding: 8px;
   }
-}
 
-.example-spacer {
-  flex: 1 1 auto;
-}
+  &__user {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
 
+    @media (max-width: 1279px) {
+      margin-right: 20px;
+    }
 
-.mat-align-tabs {
-  background-color: #d1d1d1;
+    &__name {
+      margin-right: 5px;
+    }
+
+    &__avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 10px;
+    }
+  }
 }

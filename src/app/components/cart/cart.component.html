@@ -1,0 +1,45 @@
+<div class="cart" *ngIf="show">
+  <span (click)="close()" class="close">X</span>
+  <div class="cart__content">
+    <div class="cart__content__products">
+      <p *ngIf="emptyList()">Carrinho Vazio</p>
+      <div *ngFor="let product of cartData" class="cart__content__products__product">
+        <img [src]="product?.image" />
+        <div class="cart__content__products__product__infos">
+          <span class="cart__content__products__product__infos__name">{{
+            product?.name
+            }}</span>
+          <span class="cart__content__products__product__infos__price">{{ product?.price }} <small>DOTZX</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart__footer">
+    <div class="cart__footer__address">
+      <p>Endereço</p>
+      <div class="cart__footer__address__infos">
+        <span>Av. Olavo Lacerda Montenegro, 6675</span>
+        <span>Parque das Nações</span>
+        <span>Parnamirim - RN</span>
+        <span> CEP 59159-400</span>
+      </div>
+    </div>
+    <div class="cart__footer__infos">
+      <p>
+        Pontos: <span>{{ user?.points }} <small>DOTZX</small></span>
+      </p>
+    </div>
+    <div class="cart__footer__infos">
+      <p>
+        Troca: <span>{{ getTotal() }} <small>DOTZX</small></span>
+      </p>
+    </div>
+    <div class="cart__footer__infos">
+      <p>
+        Saldo: <span>{{ getBalance() }} <small>DOTZX</small></span>
+      </p>
+    </div>
+    <button>Concluir</button>
+  </div>
+</div>

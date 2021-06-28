@@ -1,14 +1,14 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
-import { Iproduct } from './../../interfaces/product';
-import { Iprofile } from './../../interfaces/profile';
+import { IProduct } from './../../interfaces/product';
+import { IProfile } from './../../interfaces/profile';
 import { IUserState } from './../../store/user/state';
 
 const selectFeature = createFeatureSelector<IUserState>('user');
 
 export const selectUser = createSelector(
   selectFeature,
-  (state: IUserState): Iprofile => {
+  (state: IUserState): IProfile => {
     return state.profile;
   },
 );
@@ -22,7 +22,7 @@ export const selectCart = createSelector(
 
 export const selectCartData = createSelector(
   selectFeature,
-  (state: IUserState): Iproduct[] => {
+  (state: IUserState): IProduct[] => {
     return state.cartData ?? [];
   },
 );

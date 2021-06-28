@@ -1,15 +1,16 @@
 import { createAction, props } from '@ngrx/store';
-import { Iproduct } from './../../interfaces/product';
-import { Iprofile } from './../../interfaces/profile';
+import { IProduct } from './../../interfaces/product';
+
+import { IProfile } from './../../interfaces/profile';
 
 export const upsertProfile = createAction(
   '[user] - Upsert Profile',
-  props<{ profile: Iprofile }>(),
+  props<{ profile: IProfile }>(),
 );
 
 export const setCartData = createAction(
   '[user] - Set Cart data',
-  props<{ cartData: Iproduct }>(),
+  props<{ cartData: IProduct }>(),
 );
 
 export const setShowCart = createAction(

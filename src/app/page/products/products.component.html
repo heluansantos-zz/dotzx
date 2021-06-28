@@ -1,0 +1,21 @@
+<div class="home">
+  <div class="container">
+    <div class="home__infos">
+      <div class="home__infos__search">
+        <img src="./../../../assets/img/search.png" />
+        <input placeholder="Pesquisar" #input />
+      </div>
+    </div>
+  </div>
+  <div class="home__product">
+    <div class="container">
+      <div class="home__product__list">
+        <app-product-card
+          [product]="product"
+          class="home__product__list__card"
+          *ngFor="let product of products"
+        ></app-product-card>
+      </div>
+    </div>
+  </div>
+</div>

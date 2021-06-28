@@ -1,0 +1,16 @@
+<div [routerLink]="['/produto', product?.id]" class="product__card">
+  <div class="product__card__image">
+    <img [src]="product?.image" />
+  </div>
+
+  <div class="product__card__footer">
+    <div class="product__card__footer__infos">
+      <div class="product__card__footer__infos__name">
+        <p>{{ product?.name }}</p>
+      </div>
+      <div class="product__card__footer__infos__price">
+        <span>{{ product?.price }}<small> DOTX</small></span>
+      </div>
+    </div>
+  </div>
+</div>

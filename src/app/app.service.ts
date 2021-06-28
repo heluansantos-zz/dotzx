@@ -14,10 +14,15 @@ export abstract class AppService {
   }
 
   getProducts(): Observable<unknown> {
-    return this.http.get(`${this.api}/product`);
+    return this.http.get(`${this.api}/products`);
   }
+
   getProductById(id: string): Observable<unknown> {
-    return this.http.get(`${this.api}/product/${id}`);
+    return this.http.get(`${this.api}/products/${id}`);
+  }
+
+  getProductByName(value: string): Observable<unknown> {
+    return this.http.get(`${this.api}/products?name=${value}`);
   }
 
   getUser(): Observable<unknown> {
@@ -27,5 +32,4 @@ export abstract class AppService {
   putUser(data: unknown): Observable<unknown> {
     return this.http.put(`${this.api}/users/${this.mockedUser}`, data);
   }
-
 }
